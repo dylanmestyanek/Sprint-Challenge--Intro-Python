@@ -31,7 +31,8 @@ def cityreader(cities=[]):
   with open('./cityreader/cities.csv', newline='') as csvfile:
     data = csv.reader(csvfile, delimiter='|')
     for row in data:
-          info = row[0].split(',')
+        info = row[0].split(',')
+        if info[0] != 'city':
           cities.append(City(info[0], info[3], info[4]))
     return cities
 
