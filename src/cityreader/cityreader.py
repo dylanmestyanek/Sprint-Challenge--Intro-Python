@@ -33,7 +33,7 @@ def cityreader(cities=[]):
     for row in data:
         info = row[0].split(',')
         if info[0] != 'city':
-          cities.append(City(info[0], info[3], info[4]))
+          cities.append(City(info[0], float(info[3]), float(info[4])))
     return cities
 
 cityreader(cities)
